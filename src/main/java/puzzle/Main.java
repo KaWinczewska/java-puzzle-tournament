@@ -12,7 +12,7 @@ public final class Main {
     }
     long seed = args.length > 1 ? Long.parseLong(args[1]) : 42;
     if (args.length > 0 && args[0].equals("compare")) {
-      StrategyComparison.run(seed, 20, 10);
+      StrategyComparison.run(seed, 100, 10);
       return;
     }
     Tournament tournament = new Tournament(seed);
