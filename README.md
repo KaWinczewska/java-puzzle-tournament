@@ -1,13 +1,10 @@
 # Java Puzzle Tournament
 
-A small Java console project based on the university OOP assignment **“Turniej gry w układankę”** (January 29, 2025), extended with JUnit tests and a strategy comparison.
-
 Players transform an `n × n` binary board into all ones using reversible commands. Five strategies compete in a single-elimination tournament; fewer commands wins.
 
 - Eight basic operations and composites, with exact undo and retained history.
 - Independent copies of one shared starting board per tournament round.
 - Seeded randomness, registration-order tie-breaking, and automatic byes.
-- Java 17, Maven, JUnit 5, and GitHub Actions; no runtime dependencies.
 
 ```mermaid
 flowchart LR
@@ -20,7 +17,7 @@ flowchart LR
 
 ## Build and run
 
-Install JDK 17 (or 21) and Maven 3.9+, then run from this directory:
+Install JDK 27 and Maven 3.9+, then run from this directory:
 
 ```bash
 mvn verify
@@ -68,4 +65,4 @@ One local run used seed **42**, twenty shared random **10×10** boards, Temurin 
 
 Scores count game actions; elapsed time measures preparation and game execution, including board copies and solved checks. Board generation and printing are excluded. This small experiment has no warm-up or statistical analysis and does not establish universal optimality or reliable speed rankings.
 
-The tests cover commands and undo, composite restrictions, strategy phases, score limits, equal starting boards, ties, byes, and tournament outcomes. See the [pre-publication audit](docs/report.md) for the project structure, complexity, and checks performed.
+The tests cover commands and undo, composite restrictions, strategy phases, score limits, equal starting boards, ties, byes, and tournament outcomes.
